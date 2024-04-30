@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+:root {
+    /* Primary colors */
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+
+    /* Neutral colors */
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+
+    /* Main fonts */
+    --main-fonts: "League Spartan", sans-serif;
+
+    /* Fonts weight */
+    --bold-font-weight: 700;
+    --secondary-font-weight: 500;
+    --light-font-weight: 400;
+
+    /* Font size */
+    --Default-font-size: 15px;
+    --verified-name: 1.0625rem;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+Body {
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--Default-font-size);
+    font-family: var(--main-fonts);
+    font-weight: var(--bold-font-weight);
+    background-color: var(--Light-Grayish-Magenta);
+    padding: 3rem;
+}
+
+.parent-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 95.625rem;
+    max-width: 23.438rem;
+    padding: 5.125rem 1.5rem 6.188rem 1.5rem;
+    background-color: var(--White);
+    overflow: hidden;
+    background-image: url(../social-proof-section-master/images/bg-pattern-top-mobile.svg), 
+    url(../social-proof-section-master/images/bg-pattern-bottom-mobile.svg);
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
+}
+
+.parent-container .rating-section {
+    display: grid;
+}
+
+.rating-section .advertise p {
+    text-align: center;
+    font-size: 1.188rem;
+    line-height: 1.563rem;
+    font-weight: var(--secondary-font-weight);
+}
+
+.rating-section .advertise h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 2rem;
+    font-weight: var(--bold-font-weight);
+    margin-bottom: 1.063rem;
+}
+
+.rating-section .advertise {
+    min-height: 13.688rem;
+    margin-bottom: 2.438rem;
+}
+
+.rating-section .reviews {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.rating-section .icon {
+    font-size: var(--verified-name);
+    background-color: var(--Light-Grayish-Magenta);
+    min-height: 4.875rem; 
+    border-radius: 8px;
+    padding: 1rem 3.4375rem;
+}
+
+.reviews .icon::before {
+    content: '';
+    width: 100px;
+    height: 1rem;
+    margin: 0 auto;
+    display: block;
+    background-image: url(../social-proof-section-master/images/icon-star.svg);
+    margin-bottom: .5rem;
+    background-repeat: space;
+}
+
+.rating-section h1, .rating-section .rated {
+    color: var(--Very-Dark-Magenta);
+}
+
+.rating-section h1 {
+    text-align: center;
+    font-weight: var(--bold-font-weight);
+}
+
+.parent-container .reviewers-section {
+    display: grid; 
+    align-items: center;
+    gap: 1rem;
+}
+
+.reviewers-section .verify-section {
+    font-size: var(--verified-name);
+    background-color: var(--Very-Dark-Magenta);
+    border-radius: 12px;
+    min-height: 15.5rem;
+    max-width: 20.438rem;
+    padding: 2.5rem 1.875rem;
+}
+
+.reviewers-section .verify-section .flex-box {
+    display: flex;
+    align-items: center;
+    gap: 1.4375rem;
+    margin-bottom: 1.875rem ;
+}
+
+.reviewers-section .verify-section img {
+    border-radius: 50%;
+    width: 40px; 
+    height: 40px;
+}
+
+.reviewers-section .name {
+    color: var(--White);
+    font-size: var(--verified-name);
+}
+
+.reviewers-section .verified {
+    color: var(--Soft-Pink);
+    margin-top: 0.25rem;
+    font-weight: var(--light-font-weight);
+    font-size: var(--verified-name);
+}
+
+.reviewers-section .comment {
+    font-size: 1.0625rem;
+    color: var(--Light-Grayish-Magenta);
+    font-weight: var(--light-font-weight);
+    text-decoration: none;
+    line-height: 1.375rem;
+    letter-spacing: 0.3px;
+
+}
+.rating-section p {
+    color: var(--Dark-Grayish-Magenta);
+}
+
+.attribution { 
+    font-size: 0.7rem;  
+    color: darkgray;
+    margin-top: 1rem;
+}
+.attribution a { 
+    font-size: larger;
+    font-style: italic;
+    text-decoration: none;
+    font-weight: bold;
+    color: hsl(192, 85%, 34%); 
+}
+
+@media (min-width: 1324px) {
+    .parent-container {
+        margin: 1.5rem;
+        max-width: 90rem;
+        min-height: 50rem;
+        padding: 7.375rem 7.375rem 6.25rem 7.375rem;
+        background-image: url(../social-proof-section-master/images/bg-pattern-top-desktop.svg), 
+    url(../social-proof-section-master/images/bg-pattern-bottom-desktop.svg);
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
+    }
+
+    .parent-container .rating-section {
+        min-height: 15.313rem;
+        max-width: 69.375rem;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 4rem;
+    }
+
+    .parent-container .reviewers-section {
+        min-height: 16.625rem;
+        max-width: 69.375rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        padding: 1.063rem 0;
+        position: relative;
+    }
+
+    .reviewers-section > *:nth-child(1) {
+        transform: translateY(-1rem);
+    }
+
+    .reviewers-section > *:nth-child(3) {
+        transform: translateY(1rem);
+    }
+
+    .rating-section .advertise {
+        min-height: 15.313rem;
+        max-width: 27.813rem;
+        margin-right: 4.438rem;
+    }
+    .rating-section .reviews {
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .reviews .rated {
+        width: 40ch;
+    }
+
+    .reviews > *:nth-child(1) {
+        transform: translateX(-3rem);
+    }
+
+    .reviews > *:nth-child(3) {
+        transform: translateX(3rem);
+    }
+
+    .reviews .icon::before {
+        float: left;
+    }
+
+    .rating-section .advertise h1 {
+        width: 15ch;
+        line-height: 3rem;
+        font-size: 50px;
+        font-weight: bolder;
+        text-align: left;
+        padding-bottom: 1rem;
+    }
+
+    .rating-section .advertise p {
+        width: 45ch;
+        text-align: left;
+        font-size: 1rem;
+        font-weight: var(--secondary-font-weight);
+    }
+
+    .reviewers-section .verify-section {
+        min-height: 14.625rem;
+        max-width: 21.875rem;
+        padding: 2.625rem 2rem 2.313rem 2rem;
+        height: 100%;
+    }
+
+    .rating-section .icon {
+        min-height: 3.5rem;
+        max-width: 27.813rem;
+        padding: 1rem;
+    }
+    
+    .attribution {
+        text-align: center;
+    }
+}
